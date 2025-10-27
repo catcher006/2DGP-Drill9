@@ -23,12 +23,15 @@ def handle_events():
 
 def reset_world():
     global boy
+    global grass
 
     boy = Boy()
     game_world.add_object(boy, 1)  # 게임 월드에 소년 객체 추가
 
     grass = Grass()
     game_world.add_object(grass, 0) # 게임 월드에 잔디 객체 추가
+
+    game_world.add_object(grass, 1)
 
 
 def update_world():
