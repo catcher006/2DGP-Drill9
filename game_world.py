@@ -24,8 +24,8 @@ def render():
 
 def remove_object(o): # 게임 내 객체를 제거하는 함수
     for layer in world:
-        for o in layer:
+        if o in layer:
             layer.remove(o)
             return
 
-    raise Expection("월드에 존재하지 않는 객체를 삭제하려고 합니다")
+    raise ValueError("월드에 존재하지 않는 객체를 삭제하려고 합니다")
